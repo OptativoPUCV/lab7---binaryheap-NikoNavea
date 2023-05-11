@@ -39,6 +39,7 @@ Heap* createHeap(){
   heap->capac = 3;
   heap->size = 0;
   heap->heapArray = malloc(heap->capac * sizeof(heapElem));
+  if (heap->heapArray == NULL) exit(EXIT_FAILURE);
   
   return heap;
 }
