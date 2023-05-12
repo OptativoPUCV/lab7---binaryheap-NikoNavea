@@ -52,7 +52,7 @@ void heap_pop(Heap* pq){
   if(pq->size == 0){
     return;
   }
-  free(pq->heapArray[0].data);
+  
   pq->heapArray[0] = pq->heapArray[pq->size-1];
   pq->size--;
   
