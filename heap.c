@@ -40,6 +40,7 @@ Heap* createHeap(){
   heap->size = 0;
   heap->heapArray = malloc(heap->capac * sizeof(heapElem));
   if (heap->heapArray == NULL) exit(EXIT_FAILURE);
-  
+  heap->heapArray->data = NULL;
+  heap->heapArray->priority = 0;
   return heap;
 }
